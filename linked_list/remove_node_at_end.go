@@ -1,4 +1,4 @@
-package main
+package linked_list
 
 func (ll *LinkedList) removeNodeAtEnd() {
 	if ll.head == nil || ll.head.next == nil {

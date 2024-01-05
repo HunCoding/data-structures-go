@@ -1,4 +1,4 @@
-package main
+package linked_list
 
 func (ll *LinkedList) removeNodeGivenPosition(position int) {
 	if position <= 0 {

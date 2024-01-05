@@ -1,4 +1,4 @@
-package main
+package linked_list
 
 func (ll *LinkedList) insertAtGivenPosition(data string, position int) {
 	newNode := &Node{data: data}

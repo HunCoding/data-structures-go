@@ -1,4 +1,4 @@
-package main
+package linked_list
 
 type LinkedList struct {
 	head *Node
@@ -7,7 +7,4 @@ type LinkedList struct {
 type Node struct {
 	data string
 	next *Node
-}
-
-func main() {
 }

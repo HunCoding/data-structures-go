@@ -1,4 +1,4 @@
-package main
+package linked_list
 
 func (ll *LinkedList) insertAtEnd(data string) {
 	newNode := &Node{data: data, next: nil}
