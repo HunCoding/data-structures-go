@@ -1,29 +1,25 @@
-package main
+package doubly_linked_list
 
-func main() {
-	list3 := &ListNode{
-		Data:     3,
-		Next:     nil,
-		Previous: nil,
-	}
-	list2 := &ListNode{
-		Data:     2,
-		Next:     list3,
-		Previous: nil,
-	}
-	list1 := &ListNode{
-		Data:     1,
-		Next:     list2,
-		Previous: nil,
+import "fmt"
+
+func (dl *DoublyLinkedList) printList() {
+	current := dl.Head
+
+	for current != nil {
+		fmt.Print(current.Data, " -> ")
+		current = current.Next
 	}
 
-	list3.Previous = list2
-	list2.Previous = list1
+	fmt.Printf("null\n")
+}
 
-	ll := &DoublyLinkedList{
-		Head: list1,
-		Tail: list3,
+func (dl *DoublyLinkedList) printListBackward() {
+	current := dl.Tail
+
+	for current != nil {
+		fmt.Print(current.Data, " -> ")
+		current = current.Previous
 	}
 
-	ll.printListBackward()
+	fmt.Printf("null\n")
 }
