@@ -8,16 +8,20 @@ func (ll *LinkedList) findWhereLoopStarts() *Node {
 		fastPointer = fastPointer.next.next
 		slowPointer = slowPointer.next
 
-		if slowPointer == fastPointer {
-			temp := ll.head
-			for slowPointer != temp {
-				temp = temp.next
-				slowPointer = slowPointer.next
-			}
-
-			return temp
+		if fastPointer == slowPointer {
+			break
 		}
 	}
 
-	return nil
+	if slowPointer != fastPointer {
+		return nil
+	}
+
+	temp := ll.head
+	for temp != slowPointer {
+		temp = temp.next
+		slowPointer = slowPointer.next
+	}
+
+	return temp
 }

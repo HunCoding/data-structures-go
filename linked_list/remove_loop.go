@@ -8,9 +8,10 @@ func (ll *LinkedList) removeLoop() {
 		fastPointer = fastPointer.next.next
 		slowPointer = slowPointer.next
 
-		if slowPointer == fastPointer {
+		if fastPointer == slowPointer {
 			temp := ll.head
-			for slowPointer.next != temp.next {
+
+			for temp.next != slowPointer.next {
 				temp = temp.next
 				slowPointer = slowPointer.next
 			}
