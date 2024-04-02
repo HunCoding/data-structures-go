@@ -1,4 +1,4 @@
-package stacks
+package main
 
 type StackLinkedList struct {
 	Top    *StackNode
